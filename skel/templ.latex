@@ -1,0 +1,16 @@
+\documentclass{article}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{indentfirst}
+
+\title{}
+\author{Rodrigo Chamun}
+
+\date{} % Month dd, yyyy 
+
+\begin{document}
+	\maketitle
+
+\end{document}
