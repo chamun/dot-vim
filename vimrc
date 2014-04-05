@@ -6,10 +6,15 @@ set mouse=a
 set autoindent
 set hlsearch
 set nowrap
-set textwidth=72
-set tabstop=4
+set textwidth=80
 set shiftwidth=4
+set softtabstop=4
+set noexpandtab
+
 colorscheme pablo
+
+" Default register is OS clipboard
+set clipboard=unnamedplus
 
 " Get template associated with file extension
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
@@ -18,7 +23,7 @@ autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.o$']
 
-" vimbits.com
+" === vimbits.com
 
 " Automatically reload vimrc when it's saved
 augroup AutoReloadVimRC
