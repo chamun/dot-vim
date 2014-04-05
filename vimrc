@@ -10,6 +10,7 @@ set textwidth=80
 set shiftwidth=4
 set softtabstop=4
 set noexpandtab
+let mapleader = ","
 
 colorscheme pablo
 
@@ -18,6 +19,10 @@ set clipboard=unnamedplus
 
 " Get template associated with file extension
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
+
+" CommandT
+let g:CommandTMaxHeight = 20
+let g:CommandTCancelMap = ""	" Esc
 
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
