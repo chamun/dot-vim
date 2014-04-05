@@ -1,5 +1,7 @@
 " vim-pathogen
 execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
 set number
 set mouse=a
@@ -8,7 +10,7 @@ set hlsearch
 set nowrap
 set textwidth=80
 set shiftwidth=4
-set softtabstop=4
+set tabstop=4
 set noexpandtab
 let mapleader = ","
 
