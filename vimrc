@@ -52,7 +52,6 @@ cmap w!! %!sudo tee > /dev/null %
 
 " Remove f1 help
 inoremap <F1> <nop>
-nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
 " Turn off arrow keys
