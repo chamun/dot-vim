@@ -25,10 +25,14 @@ autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
 " CommandT
 let g:CommandTMaxHeight = 20
 let g:CommandTCancelMap = ""	" Esc
+let g:CommandTAcceptSelectionSplitMap = "<C-h>"
+let g:CommandTCursorLeftMap = "<Left>"
 
 " NERDTree
-map <F2> :NERDTreeToggle<CR>
+map <F1> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.o$']
+let NERDTreeMapOpenSplit  = "h"
+let NERDTreeMapOpenVSplit = "v"
 
 " === vimbits.com
 
