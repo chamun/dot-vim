@@ -13,8 +13,10 @@ set shiftwidth=4
 set tabstop=4
 set noexpandtab
 let mapleader = ","
-
 colorscheme pablo
+
+" Window being edited gets a red status bar
+autocmd BufEnter * hi StatusLine ctermbg=red ctermfg=white
 
 " Default register is OS clipboard
 set clipboard=unnamedplus
@@ -84,4 +86,3 @@ cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-l> <t_kr>
 cnoremap <C-h> <t_kl>
-cnoremap <C-k> <t_ku>
