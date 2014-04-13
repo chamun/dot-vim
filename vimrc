@@ -16,7 +16,7 @@ let mapleader = ","
 colorscheme pablo
 
 " Window being edited gets a red status bar
-autocmd BufEnter * hi StatusLine ctermbg=red ctermfg=white
+autocmd WinEnter * hi StatusLine ctermbg=red ctermfg=white
 
 " Default register is OS clipboard
 set clipboard=unnamedplus
