@@ -14,6 +14,7 @@ set tabstop=4
 set noexpandtab
 let mapleader = ","
 colorscheme pablo
+hi Search ctermfg=8
 
 " Window being edited gets a red status bar
 autocmd WinEnter * hi StatusLine ctermbg=red ctermfg=white
