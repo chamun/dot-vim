@@ -16,6 +16,8 @@ let mapleader = ","
 colorscheme pablo
 hi Search ctermfg=8
 
+map <leader>w :w<cr>
+
 " Window being edited gets a red status bar
 autocmd WinEnter * hi StatusLine ctermbg=red ctermfg=white
 
