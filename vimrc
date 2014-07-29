@@ -27,11 +27,10 @@ set clipboard=unnamedplus
 " Get template associated with file extension
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
 
-" CommandT
-let g:CommandTMaxHeight = 20
-let g:CommandTCancelMap = ""	" Esc
-let g:CommandTAcceptSelectionSplitMap = "<C-h>"
-let g:CommandTCursorLeftMap = "<Left>"
+" CtrlP
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.svn|vendor/bundle|)$',
+  \ }
 
 " NERDTree
 map <F1> :NERDTreeToggle<CR>
