@@ -39,6 +39,10 @@ let NERDTreeMapOpenSplit  = "h"
 let NERDTreeMapOpenVSplit = "v"
 " Force NERDTree to close with last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Signify
+let g:signify_vcs_list = [ 'git', 'svn' ]
+
 " === vimbits.com
 
 " Automatically reload vimrc when it's saved
