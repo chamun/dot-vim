@@ -13,7 +13,7 @@ set shiftwidth=4
 set tabstop=4
 set noexpandtab
 let mapleader = ","
-colorscheme pablo
+colorscheme jellybeans
 hi Search ctermfg=8
 
 map <leader>w :w<cr>
