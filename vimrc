@@ -13,6 +13,7 @@ set shiftwidth=4
 set tabstop=4
 set noexpandtab
 set splitright
+set splitbelow
 let mapleader = ","
 colorscheme jellybeans
 hi Search ctermfg=8
