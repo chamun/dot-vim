@@ -9,9 +9,9 @@ set autoindent
 set hlsearch
 set nowrap
 set textwidth=80
-set shiftwidth=4
-set tabstop=4
-set noexpandtab
+set shiftwidth=2
+set tabstop=2
+set expandtab
 set splitright
 set splitbelow
 let mapleader = ","

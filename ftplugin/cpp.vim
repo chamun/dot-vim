@@ -13,3 +13,6 @@ autocmd InsertLeave  * if pumvisible() == 0 | pclose | endif
 
 " Generate tags for current project
 map <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
+set shiftwidth=4
+set tabstop=4
+set noexpandtab
