@@ -35,6 +35,8 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.git|\.svn|vendor/bundle|)$',
   \ }
 
+let g:ctrlp_working_path_mode='r'
+
 " NERDTree
 map <F1> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.o$']
