@@ -45,84 +45,6 @@ snippet doctype "HTML - 5.0 (doctype)" b
 endsnippet
 
 #############
-# Shortcuts #
-#############
-snippet down "Down (down)"
-&#x2193;
-endsnippet
-
-snippet enter "Enter (enter)"
-&#x2305;
-endsnippet
-
-snippet escape "Escape (escape)"
-&#x238B;
-endsnippet
-
-snippet shift "Shift (shift)"
-&#x21E7;
-endsnippet
-
-snippet tab "Tab (tab)"
-&#x21E5;
-endsnippet
-
-snippet up "Up (up)"
-&#x2191;
-endsnippet
-
-snippet return "Return (return)"
-&#x21A9;
-endsnippet
-
-snippet right "Right (right)"
-&#x2192;
-endsnippet
-
-snippet left "Left (left)"
-&#x2190;
-endsnippet
-
-snippet option "Option (option)"
-&#x2325;
-endsnippet
-
-#######################
-# Conditional inserts #
-#######################
-snippet ! "IE Conditional Comment: Internet Explorer 5_0 only"
-<!--[if IE 5.0]>${1:IE Conditional Comment: Internet Explorer 5.0 only }<![endif]-->$0
-endsnippet
-
-snippet ! "IE Conditional Comment: Internet Explorer 5_5 only"
-<!--[if IE 5.5000]>${1:IE Conditional Comment: Internet Explorer 5.5 only }<![endif]-->$0
-endsnippet
-
-snippet ! "IE Conditional Comment: Internet Explorer 5_x"
-<!--[if lt IE 6]>${1:IE Conditional Comment: Internet Explorer 5.x      }<![endif]-->$0
-endsnippet
-
-snippet ! "IE Conditional Comment: Internet Explorer 6 and below"
-<!--[if lte IE 6]>${1:IE Conditional Comment: Internet Explorer 6 and below }<![endif]-->$0
-endsnippet
-
-snippet ! "IE Conditional Comment: Internet Explorer 6 only"
-<!--[if IE 6]>${1:IE Conditional Comment: Internet Explorer 6 only   }<![endif]-->$0
-endsnippet
-
-snippet ! "IE Conditional Comment: Internet Explorer 7+"
-<!--[if gte IE 7]>${1:IE Conditional Comment: Internet Explorer 7 and above }<![endif]-->$0
-endsnippet
-
-snippet ! "IE Conditional Comment: Internet Explorer"
-<!--[if IE]>${1:       IE Conditional Comment: Internet Explorer          }<![endif]-->$0
-endsnippet
-
-snippet ! "IE Conditional Comment: NOT Internet Explorer"
-<!--[if !IE]><!-->${1:  IE Conditional Comment: NOT Internet Explorer      }<!-- <![endif]-->$0
-endsnippet
-
-#############
 # HTML TAGS #
 #############
 snippet input "Input with Label" w
@@ -161,34 +83,28 @@ snippet base "XHTML <base>" w
 endsnippet
 
 snippet body "XHTML <body>"
-<body id="${1:`!p
+<body${1: id="${2:`!p
 snip.rv = snip.fn and 'Hallo' or 'Nothin'
-`}"${2: onload="$3"}>
+`}"}${3: onload="$4"}>
 	$0
 </body>
 endsnippet
 
-snippet div#. "<div> with class" w
-<div id="$1" class="$2">
-	$3
-</div>
-endsnippet
-
-snippet div. "<div> with class" w
-<div id="$1">
-	$2
+snippet div "<div>" w
+<div>
+	$0
 </div>
 endsnippet
 
 snippet div. "<div> with class" w
 <div class="$1">
-	$2
+	$0
 </div>
 endsnippet
 
-snippet div "<div>" w
-<div>
-	$1
+snippet div# "<div> with ID & class" w
+<div id="$1">
+	$0
 </div>
 endsnippet
 
@@ -203,14 +119,14 @@ snip.rv = (snip.basename or 'unnamed') + '_submit'
 endsnippet
 
 snippet h1 "XHTML <h1>" w
-<h1>$1</h2>
+<h1>$0</h1>
 endsnippet
 
 snippet head "XHTML <head>"
 <head>
 	<meta charset="utf-8">
 	<title>${1:`!p snip.rv = snip.basename or "Page Title"`}</title>
-	$2
+	$0
 </head>
 endsnippet
 
@@ -228,20 +144,20 @@ endsnippet
 
 snippet script "XHTML <script>" w
 <script type="text/javascript" charset="utf-8">
-	$1
+	$0
 </script>
 endsnippet
 
 snippet style "XHTML <style>" w
-<style type="text/css" media="screen">
-	$1
+<style type="text/css">
+	$0
 </style>
 endsnippet
 
 snippet table "XHTML <table>" w
-<table border="${1:0}"${2: cellspacing="${3:5}" cellpadding="${4:5}"}>
-	<tr><th>${5:Header}</th></tr>
-	<tr><td>${6:Data}</td></tr>
+<table>
+	<tr><th>${1:Header}</th></tr>
+	<tr><td>${0:Data}</td></tr>
 </table>
 endsnippet
 
@@ -250,53 +166,32 @@ snippet a "Link" w
 endsnippet
 
 snippet p "paragraph" w
-<p>$1</p>
+<p>$0</p>
 endsnippet
 
 snippet li "list item" w
-<li>$1</li>
+<li>$0</li>
 endsnippet
 
 snippet ul "unordered list" w
 <ul>
-	$1
+$0
 </ul>
 endsnippet
 
 snippet td "table cell" w
-<td>$1</td>
+<td>$0</td>
 endsnippet
 
 snippet th "table header" w
-<th>$1</th>
+<th>$0</th>
 endsnippet
 
 snippet tr "table row" w
-<tr>$1</tr>
+<tr>$0</tr>
 endsnippet
 
 snippet title "XHTML <title>" w
 <title>${1:`!p snip.rv = snip.basename or "Page Title"`}</title>
-endsnippet
-
-snippet fieldset "Fieldset" w
-<fieldset id="${1/[\w\d]+|( )/(?1:_:\L$0\E)/g}" ${2:class="${3:}"}>
-	<legend>$1</legend>
-	$0
-</fieldset>
-endsnippet
-
-snippet movie "Embed QT movie (movie)" b
-<object width="$2" height="$3" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab">
-	<param name="src" value="$1"`!p x(snip)`>
-	<param name="controller" value="$4"`!p x(snip)`>
-	<param name="autoplay" value="$5"`!p x(snip)`>
-	<embed src="${1:movie.mov}"
-		width="${2:320}" height="${3:240}"
-		controller="${4:true}" autoplay="${5:true}"
-		scale="tofit" cache="true"
-		pluginspage="http://www.apple.com/quicktime/download/"
-	`!p x(snip)`>
-</object>
 endsnippet
 # vim:ft=snippets:
