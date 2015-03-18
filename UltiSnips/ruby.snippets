@@ -428,7 +428,7 @@ endsnippet
 
 
 
-snippet do "do |<key>| ... end" i
+snippet do| "do |<key>| ... end" i
 do |${1:args}|
 	$0
 end
@@ -436,7 +436,7 @@ endsnippet
 
 
 
-snippet Do "do ... end" i
+snippet do "do ... end" i
 do
 	$0
 end
@@ -543,7 +543,7 @@ endsnippet
 
 
 
-snippet class "class <class_name> def initialize ... end end"
+snippet clsi "class <class_name> def initialize ... end end"
 class ${1:class_name}
 	def initialize ${2:*args}
 		$0
@@ -551,6 +551,11 @@ class ${1:class_name}
 end
 endsnippet
 
+snippet cls "class <class_name> end"
+class ${1:class_name}
+	$0
+end
+endsnippet
 
 
 snippet module "module"
@@ -565,6 +570,16 @@ snippet ###
 =begin
 	$0
 =end
+endsnippet
+
+snippet desc
+describe '$1' do
+	$0
+end
+endsnippet
+
+snippet req
+require '$0'
 endsnippet
 
 # vim: set ts=2 sw=2 expandtab:
