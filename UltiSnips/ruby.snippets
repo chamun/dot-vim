@@ -86,8 +86,8 @@ endsnippet
 
 
 snippet "\b(de)?f" "def <name>..." r
-def ${1:function_name}${2: ${3:*args}}
-	${0:# TODO}
+def ${1:function_name}${2:($3)}
+	$0
 end
 endsnippet
 
@@ -580,6 +580,10 @@ endsnippet
 
 snippet req
 require '$0'
+endsnippet
+
+snippet it
+it '$0'
 endsnippet
 
 # vim: set ts=2 sw=2 expandtab:
