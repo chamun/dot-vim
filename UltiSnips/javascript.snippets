@@ -159,4 +159,16 @@ snippet req "require an AMD module"
 require([${1:'dependencies'}], ${2:callback});
 endsnippet
 
+snippet cls "class"
+var ${1:Class} = (function () {
+	function $1() {
+		${2:${3:Parent}.call(this);}
+	};${4: $1.prototype = Object.create($3.prototype);}
+
+	$0
+
+	return $1;
+})();
+endsnippet
+
 # vim:ft=snippets:
