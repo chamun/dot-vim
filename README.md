@@ -27,7 +27,7 @@ Clone the repository
 
 Make a symlink to the vimrc file
 
-    ln -s ~/.vim/vimrc ~/.vim
+    ln -s ~/.vim/vimrc ~/.vimrc
 
 Initialize the plugins
 
