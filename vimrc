@@ -31,6 +31,9 @@ set clipboard=unnamedplus
 " Get template associated with file extension
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
 
+" Remove trailing white spaces when file is saved
+autocmd BufWritePre * :%s/\s\+$//e
+
 " CtrlP
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.git|\.svn|vendor/bundle|)$',
