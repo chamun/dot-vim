@@ -36,7 +36,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " CtrlP
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.svn|vendor/bundle|)$',
+  \ 'dir':  '\v[\/](\.git|\.svn|vendor/bundle|node_modules)$',
   \ }
 
 let g:ctrlp_working_path_mode='r'
