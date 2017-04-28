@@ -17,6 +17,7 @@ I use the following plugins:
 * vim-signify
 * vim-surround
 * vim-windowswap
+* vim-go
 * UltiSnips
 
 ## Installation
