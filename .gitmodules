@@ -31,9 +31,6 @@
 [submodule "bundle/jellybeans"]
 	path = pack/plugins/start/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim.git
-[submodule "bundle/UltiSnips"]
-	path = pack/plugins/start/UltiSnips
-	url = https://github.com/vim-scripts/UltiSnips.git
 [submodule "bundle/vim-go"]
 	path = pack/plugins/start/vim-go
 	url = git@github.com:fatih/vim-go.git
