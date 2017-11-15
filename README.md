@@ -33,3 +33,7 @@ Initialize the plugins
 
     cd ~/.vim
     git submodule update --init
+
+Update the plugins
+
+    git submodule update --recursive --remote
