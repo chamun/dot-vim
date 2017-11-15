@@ -1,39 +1,39 @@
 [submodule "bundle/vim-rails"]
-	path = bundle/vim-rails
+	path = pack/plugins/start/vim-rails
 	url = https://github.com/tpope/vim-rails.git
 [submodule "bundle/vim-ruby"]
-	path = bundle/vim-ruby
+	path = pack/plugins/start/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 [submodule "bundle/ack.vim"]
-	path = bundle/ack.vim
+	path = pack/plugins/start/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/vim-bundle"]
-	path = bundle/vim-bundle
+	path = pack/plugins/start/vim-bundle
 	url = https://github.com/tpope/vim-bundler.git
 [submodule "bundle/vim-commentary"]
-	path = bundle/vim-commentary
+	path = pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+	path = pack/plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
+	path = pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-windowswap"]
-	path = bundle/vim-windowswap
+	path = pack/plugins/start/vim-windowswap
 	url = https://github.com/wesQ3/vim-windowswap.git
 [submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
+	path = pack/plugins/start/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/vim-signify"]
-	path = bundle/vim-signify
+	path = pack/plugins/start/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
 [submodule "bundle/jellybeans"]
-	path = bundle/jellybeans
+	path = pack/plugins/start/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim.git
 [submodule "bundle/UltiSnips"]
-	path = bundle/UltiSnips
+	path = pack/plugins/start/UltiSnips
 	url = https://github.com/vim-scripts/UltiSnips.git
 [submodule "bundle/vim-go"]
-	path = bundle/vim-go
+	path = pack/plugins/start/vim-go
 	url = git@github.com:fatih/vim-go.git
