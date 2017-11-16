@@ -18,6 +18,8 @@ I use the following plugins:
 * vim-surround
 * vim-windowswap
 * vim-go
+* vim-javascript
+* vim-jsx
 
 ## Installation
 

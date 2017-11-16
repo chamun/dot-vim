@@ -50,6 +50,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Signify
 let g:signify_vcs_list = [ 'git', 'svn' ]
 
+" vim-jsx
+let g:jsx_ext_required = 0
+
 " === vimbits.com
 
 " Automatically reload vimrc when it's saved
