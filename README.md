@@ -39,3 +39,7 @@ Initialize the plugins
 Update the plugins
 
     git submodule update --recursive --remote
+
+Set a global .gitignore
+
+    git config --global core.excludesfile ~/.vim/.gitignore
