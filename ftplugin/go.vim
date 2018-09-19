@@ -1,6 +1,7 @@
 set autowrite
 
 let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
