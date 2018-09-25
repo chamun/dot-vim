@@ -20,6 +20,9 @@ hi Search ctermfg=8
 map <leader>w :w<cr>
 map <leader>s :sh<cr>
 
+" Open quickfix window full width at the bottom
+au FileType qf wincmd J
+
 " Window being edited gets a red status bar
 autocmd WinEnter * hi StatusLine ctermbg=red ctermfg=white
 
@@ -62,9 +65,11 @@ augroup AutoReloadVimRC
   au BufWritePost $MYVIMRC so $MYVIMRC
 augroup END
 
-" Improve up/down movement on wrapped lines
+" Improve movement on wrapped lines
 nnoremap j gj
 nnoremap k gk
+" nnoremap $ g$
+" nnoremap 0 g0
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
@@ -72,24 +77,6 @@ cmap w!! %!sudo tee > /dev/null %
 " Remove f1 help
 inoremap <F1> <nop>
 vnoremap <F1> <nop>
-
-" Turn off arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-vnoremap <up> <nop>
-vnoremap <down> <nop>
-vnoremap <left> <nop>
-vnoremap <right> <nop>
-cnoremap <up> <nop>
-cnoremap <down> <nop>
-cnoremap <left> <nop>
-cnoremap <right> <nop>
 
 " Easy split navigation
 nnoremap <C-h> <C-w>h
