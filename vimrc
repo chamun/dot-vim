@@ -16,6 +16,7 @@ set splitbelow
 let mapleader = ","
 colorscheme jellybeans
 hi Search ctermfg=8
+set backspace=indent,eol,start
 
 map <leader>w :w<cr>
 map <leader>s :sh<cr>
@@ -27,7 +28,7 @@ au FileType qf wincmd J
 autocmd WinEnter * hi StatusLine ctermbg=red ctermfg=white
 
 " Default register is OS clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
 
 " Get template associated with file extension
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
@@ -49,6 +50,9 @@ let NERDTreeMapOpenSplit  = "h"
 let NERDTreeMapOpenVSplit = "v"
 " Force NERDTree to close with last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Show NERDTree's arrow chars in macOS
+scriptencoding utf-8
+set encoding=utf-8
 
 " Signify
 let g:signify_vcs_list = [ 'git', 'svn' ]
