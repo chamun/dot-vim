@@ -22,19 +22,31 @@ map <leader>w :w<cr>
 map <leader>s :sh<cr>
 
 " Open quickfix window full width at the bottom
-au FileType qf wincmd J
+augroup QuickfixPositionAndSize
+  autocmd!
+  autocmd FileType qf wincmd J
+augroup END
 
 " Window being edited gets a red status bar
-autocmd WinEnter * hi StatusLine ctermbg=red ctermfg=white
+augroup StatusLineColor
+  autocmd!
+  autocmd WinEnter * hi StatusLine ctermbg=red ctermfg=white
+augroup END
 
 " Default register is OS clipboard
 set clipboard=unnamed,unnamedplus
 
 " Get template associated with file extension
-autocmd! BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
+augroup FileExtensionTemplate
+  autocmd!
+  autocmd BufNewFile * silent! 0r ~/.vim/skel/templ.%:e
+augroup END
 
 " Remove trailing white spaces when file is saved
-autocmd BufWritePre * :%s/\s\+$//e
+augroup RemoveTrailingWhiteSpaces
+  autocmd!
+  autocmd BufWritePre * :%s/\s\+$//e
+augroup END
 
 " CtrlP
 let g:ctrlp_custom_ignore = {
@@ -49,7 +61,10 @@ let NERDTreeIgnore = ['\.o$']
 let NERDTreeMapOpenSplit  = "h"
 let NERDTreeMapOpenVSplit = "v"
 " Force NERDTree to close with last window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+augroup NERDTreeClosesWithLastWindow
+  autocmd!
+  autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+augroup END
 " Show NERDTree's arrow chars in macOS
 scriptencoding utf-8
 set encoding=utf-8
@@ -64,9 +79,8 @@ let g:jsx_ext_required = 0
 
 " Automatically reload vimrc when it's saved
 augroup AutoReloadVimRC
-  au!
-  " automatically reload vimrc when it's saved
-  au BufWritePost $MYVIMRC so $MYVIMRC
+  autocmd!
+  autocmd BufWritePost $MYVIMRC so $MYVIMRC
 augroup END
 
 " Improve movement on wrapped lines
