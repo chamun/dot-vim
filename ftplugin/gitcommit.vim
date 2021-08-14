@@ -1,2 +1,2 @@
-set textwidth=72
-set spell spelllang=en_us
+setlocal textwidth=72
+setlocal spell spelllang=en_us
